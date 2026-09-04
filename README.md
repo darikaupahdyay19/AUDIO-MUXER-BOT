@@ -27,13 +27,12 @@ AudioMuxer Pro Bot is a versatile Telegram bot for muxing audio and video files 
    pip install -r requirements.txt
    ```
 3. Copy `.env.example` to `.env` (or create a `.env` file) and fill in your variables:
-   - `BOT_TOKEN`: From BotFather
-   - `API_ID`: From my.telegram.org
-   - `API_HASH`: From my.telegram.org
-   - `OWNER_ID`: Your Telegram User ID
+   - `TELEGRAM_BOT_TOKEN`: From BotFather
+   - `LOCAL_API_SERVER`: (Optional) Local Telegram Bot API server URL for large files
+   - `MAX_FILE_SIZE_MB`: Max file size limit (default 2048)
 4. Run the bot:
    ```bash
-   python -m src.main
+   python -m bot
    ```
 
 ### Docker Setup

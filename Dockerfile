@@ -24,4 +24,4 @@ COPY . .
 RUN mkdir -p /app/data /app/temp
 
 # Set entrypoint to run the bot
-CMD ["python", "-m", "src.main"]
+CMD ["python", "-m", "bot"]
