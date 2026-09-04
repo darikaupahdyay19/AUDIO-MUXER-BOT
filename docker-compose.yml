@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: audiomuxer_bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./temp:/app/temp
+    # Uncomment the following lines if using the local telegram-bot-api
+    # depends_on:
+    #   - telegram-bot-api
+    # environment:
+    #   - BOT_API_URL=http://telegram-bot-api:8081
+
+  # Optional: Local Telegram Bot API server to bypass the 50MB file size limit.
+  # Uncomment this block to use it. Make sure to pass API_ID and API_HASH in your .env.
+  # telegram-bot-api:
+  #   image: aiogram/telegram-bot-api:latest
+  #   container_name: telegram_bot_api
+  #   restart: unless-stopped
+  #   environment:
+  #     - TELEGRAM_API_ID=${API_ID}
+  #     - TELEGRAM_API_HASH=${API_HASH}
+  #   volumes:
+  #     - telegram-api-data:/var/lib/telegram-bot-api
+  #   ports:
+  #     - "8081:8081"
+
+# Uncomment if using telegram-bot-api
+# volumes:
+#   telegram-api-data:

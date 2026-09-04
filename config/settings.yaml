@@ -1,0 +1,46 @@
+processing_limits:
+  max_file_size_mb: 2048
+  max_duration_hours: 4
+  max_concurrent_jobs: 2
+
+formats:
+  video:
+    - .mp4
+    - .mkv
+    - .avi
+    - .mov
+    - .wmv
+    - .flv
+    - .webm
+    - .m4v
+    - .mpg
+    - .mpeg
+    - .ts
+    - .m2ts
+  audio:
+    - .mp3
+    - .aac
+    - .wav
+    - .flac
+    - .ogg
+    - .opus
+    - .m4a
+    - .ac3
+    - .eac3
+    - .dts
+    - .wma
+
+sync_parameters:
+  sample_rate: 16000
+  analysis_duration: 120.0
+  analysis_start: 30.0
+  drift_segment_length: 300.0
+
+silence_detection:
+  threshold_db: -40
+  min_duration: 0.5
+  padding: 0.1
+
+cleanup:
+  interval_hours: 1
+  max_age_hours: 24

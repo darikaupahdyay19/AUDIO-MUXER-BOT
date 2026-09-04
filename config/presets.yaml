@@ -1,0 +1,27 @@
+quality_presets:
+  high:
+    audio_bitrate: "320k"
+    sample_rate: 48000
+  medium:
+    audio_bitrate: "192k"
+    sample_rate: 48000
+  low:
+    audio_bitrate: "128k"
+    sample_rate: 44100
+  voice:
+    audio_bitrate: "64k"
+    sample_rate: 16000
+
+codec_settings:
+  mp3:
+    codec: libmp3lame
+    params: []
+  aac:
+    codec: aac
+    params: []
+  opus:
+    codec: libopus
+    params: ["-vbr", "on"]
+  flac:
+    codec: flac
+    params: ["-compression_level", "5"]
